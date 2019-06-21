@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Load in libraries here -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+</head>
+
+<body>
+
+<div id="root"> <!-- Vue can only access things contained within this div -->
+
+  <h1>Simple Oscillator</h1>
+
+  <h2>Amplitude Slider</h2>
+  <!-- amplitude slider bound to data -->
+  <input type="range" min="0" max="1" step="0.1" v-model="amp" ></input>
+
+  <h2>Frequency Slider</h2>
+  <!-- frequency slider bound to data -->
+  <input type="range" min="200" max="2000" step="50" v-model="baseFreq" ></input>
+
+  <h2>Frequency Input Box</h2>
+  <!-- frequency input box bound to data -->
+  baseFreq: <input v-model="baseFreq">
+
+  <!-- Displays set data -->
+  <h3>You are hearing a sine wave of amplitude {{amp}} and frequency {{baseFreq}} Hz.</h3>
+
+  <!-- Vue components for p5 sketches, also bound to data -->
+  <p5 src="./p5-sketch1.js" :data="data"></p5>
+
+</div>
+
+<script src="vue-definitions.js"></script>
+
+</body>
+</html>
