@@ -12,15 +12,16 @@ function sketch(parent) { // we pass the sketch data from the parent
         canvas.parent(parent.$el); // links child to parent
         osc.setType('sine');
         osc.freq(400);
-        osc.amp(0);
-        osc.start();
-  
+        osc.amp(0);  
       };
   
       p.draw = function() {
         p.background(p.map(parent.data.baseFreq, 200, 2000, 0, 255)); // color changes based on freq
+        if (p.canvas.mouseOver(osc.start()));
         osc.amp(parent.data.amp);
         osc.freq(parent.data.baseFreq);
       };
     };
   }
+  console.log("p5 sketch loaded");
+
