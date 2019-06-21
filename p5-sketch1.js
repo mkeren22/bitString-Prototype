@@ -16,10 +16,10 @@ function sketch(parent) { // we pass the sketch data from the parent
       };
   
       p.draw = function() {
-        p.background(p.map(parent.data.baseFreq, 200, 2000, 0, 255)); // color changes based on freq
+        p.background(p.map(parent.baseFreq, 200, 2000, 0, 255)); // color changes based on freq
         if (p.canvas.mouseOver(osc.start()));
-        osc.amp(parent.data.amp);
-        osc.freq(parent.data.baseFreq);
+        osc.amp(parent.amp);
+        osc.freq(parent.baseFreq);
       };
     };
   }
