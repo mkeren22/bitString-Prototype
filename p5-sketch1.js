@@ -18,7 +18,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       };
   
       p.draw = function() {
-        p.background(100); // arbitrary color
+        p.background(p.map(parent.data.baseFreq, 200, 2000, 0, 255)); // color changes based on freq
         osc.amp(parent.data.amp);
         osc.freq(parent.data.baseFreq);
       };
