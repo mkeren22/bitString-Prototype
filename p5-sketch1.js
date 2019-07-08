@@ -24,6 +24,8 @@ function sketch(parent) { // we pass the sketch data from the parent
         if (amp !== parent.data.amp || freq !== parent.data.baseFreq){
           amp = parent.data.amp;
           freq = parent.data.baseFreq;
+            console.log(amp);
+            console.log(freq);
 
           p.background(p.map(freq, 200, 2000, 0, 255)); // color changes based on freq
 
