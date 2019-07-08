@@ -28,7 +28,7 @@
   baseFreq: <input v-model="data.baseFreq">
 
   <!-- Displays set data -->
-  <h3>You are hearing a sine wave of amplitude {{amp}} and frequency {{baseFreq}} Hz.</h3>
+  <h3>You are hearing a sine wave of amplitude {{data.amp}} and frequency {{data.baseFreq}} Hz.</h3>
 
   <!-- Vue components for p5 sketches, also bound to data -->
   <p5 src="./p5-sketch1.js" :data="data"></p5>
